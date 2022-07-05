@@ -60,15 +60,19 @@ function welcomeMessage() {
 }
 
 function askUser() {
-        let value ;
-        value= prompt(`Do You Like Netflix (Yes/No) : `);    
-        value.length==0 ? userAnswers[0] = "invalid" : userAnswers[0] = value;
-        
-        value= prompt(`Do You Like Shahid VIP (Yes/No) : `);    
-        value.length==0 ? userAnswers[1] = "invalid" : userAnswers[1] = value;
-        
-        value= prompt(`Do You Like EgyBest (Yes/No) : `);    
-        value.length==0 ? userAnswers[2] = "invalid" : userAnswers[2] = value;
+
+    let question=[
+        `Do You Like Netflix (Yes/No) : ` ,
+        `Do You Like Shahid VIP (Yes/No) :` ,
+        `Do You Like EgyBest (Yes/No) : `] ;
+
+    let value ;
+    for (let index = 0; index < question.length; index++) {
+        value=prompt(question[index]);
+        value.length==0 ? userAnswers[index] = "invalid" : userAnswers[index] = value;
+    
+    
+    }
 }
 
 function pringToConsole() {
