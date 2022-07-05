@@ -82,7 +82,7 @@ function askUser() {
 
 function pringToConsole() {
     for (let index = 0; index < userAnswers.length; index++) {
-        console.log(array[index]);
+        console.log(userAnswers[index]);
         
     }
         
