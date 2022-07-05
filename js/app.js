@@ -6,10 +6,10 @@
 let age,userName,gender, userAnswers= new Array(3);
 
 //invoks Functions
-/*getName();
+getName();
 getGender();
 getAge();
-confirmWelcome();*/
+confirmWelcome();
 askUser();
 pringToConsole();
 
