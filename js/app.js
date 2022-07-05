@@ -6,10 +6,10 @@
 let age,userName,gender, userAnswers= new Array(3);
 
 //invoks Functions
-getName();
+/*getName();
 getGender();
 getAge();
-confirmWelcome();
+confirmWelcome();*/
 askUser();
 pringToConsole();
 
@@ -69,15 +69,18 @@ function askUser() {
     let value ;
     for (let index = 0; index < question.length; index++) {
         value=prompt(question[index]);
-        value.length==0 ? userAnswers[index] = "invalid" : userAnswers[index] = value;
+        let flag =false;
+
+        while (!flag) {
+        value.length==0 ? value=prompt(`this is invalid Answer,try again `+question[index]): flag = true;
+        }
+        userAnswers[index] = value;
     
     
     }
 }
 
 function pringToConsole() {
-    for (let index = 0; index < userAnswers.length; index++) {
-        console.log(`Your Answers is : ${userAnswers[index]} `);
+        console.log(userAnswers);
         
-    }
 }
