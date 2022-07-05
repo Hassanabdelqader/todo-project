@@ -81,6 +81,10 @@ function askUser() {
 }
 
 function pringToConsole() {
-        console.log(userAnswers);
+    for (let index = 0; index < userAnswers.length; index++) {
+        console.log(array[index]);
+        
+    }
+        
         
 }
